@@ -6,7 +6,7 @@ Config.NPCLocations = {
 }
 Config.Prices = {
     ['getprice'] = 80, -- GET PRICE HOW MUCH TO GET --
-    ['returnprice'] = 80 -- RETURN PRICE HOW MUCH TO RETURN --
+    ['returnprice'] = 60 -- RETURN PRICE HOW MUCH TO RETURN --
 }
 
 Config.Language = {
@@ -23,26 +23,3 @@ Config.Notify = {
     ['alreay_have_bike'] = 'Вече имаш колело.',
     ['you_get_bike'] = 'Ти взе колелото сега карай и си пази rental paper-a.',
 }
--- IGNORE --
-
-function Notify(msg, type)
-    if type == 'info' then
-        exports['king-library']:Notify(msg, 'primary')
-    elseif type == 'success' then
-        exports['king-library']:Notify(msg, 'success')
-    elseif type == 'error' then
-        exports['king-library']:Notify(msg, 'error')
-    end
-end
-
-function TextUI(msg, type)
-    if type == 'info' then
-        exports['king-library']:TextUI('show', msg, 'info')
-    elseif type == 'success' then
-        exports['king-library']:TextUI('show', msg, 'success')
-    elseif type == 'error' then
-        exports['king-library']:TextUI('show', msg, 'error')
-    elseif type == 'hide' then
-        exports['king-library']:TextUI('hide')
-    end
-end
